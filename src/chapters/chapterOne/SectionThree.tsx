@@ -1,5 +1,6 @@
 import { MotifMark } from '../../components/MotifMark';
 import { Reveal } from '../../components/Reveal';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 const pillars = [
   {
@@ -58,7 +59,7 @@ export function SectionThree() {
         }}
       >
         <p>
-          Two years ago, language models could generate convincing text. They couldn&rsquo;t hold clinical logic across a complex case, use tools to act in real systems, or build on their own prior work. Those capabilities are new — and they arrived together, within a short window.
+          Two years ago, <DefinedTerm id="llm">language models</DefinedTerm> could generate convincing text. They couldn&rsquo;t hold clinical logic across a complex case, use tools to act in real systems, or build on their own prior work. Those capabilities are new — and they arrived together, within a short window.
         </p>
         <p>
           Cena&rsquo;s bet is that we&rsquo;re now inside that window. Companies watching from the sideline, waiting for AI to &ldquo;mature enough,&rdquo; are making a timing decision they may not realize they&rsquo;re making. The window where an operating model gets defined doesn&rsquo;t stay open.

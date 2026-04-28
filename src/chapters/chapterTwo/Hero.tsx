@@ -1,4 +1,5 @@
 import { MotifMark } from '../../components/MotifMark';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 export function Hero() {
   return (
@@ -54,7 +55,7 @@ export function Hero() {
             marginTop: 14,
           }}
         >
-          This isn&rsquo;t an opinion about today&rsquo;s AI vendors. It&rsquo;s an architectural choice that survives any of them changing their minds.
+          This isn&rsquo;t an opinion about today&rsquo;s <DefinedTerm id="aiVendor">AI vendors</DefinedTerm>. It&rsquo;s an architectural choice that survives any of them changing their minds.
         </p>
         <div
           className="scroll-cue"

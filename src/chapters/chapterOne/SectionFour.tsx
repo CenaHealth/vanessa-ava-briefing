@@ -1,5 +1,6 @@
 import { MotifMark } from '../../components/MotifMark';
 import { Reveal } from '../../components/Reveal';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 const roles = [
   {
@@ -59,10 +60,10 @@ export function SectionFour() {
       >
         <p>Agents-first is not a proposal to remove humans. It&rsquo;s a proposal about where humans are most valuable.</p>
         <p>
-          An agent can reason through a clinical protocol, surface a recommendation with its work shown, and flag where its confidence is lower. What the agent cannot do is bear legal or professional responsibility for what happens next, be trusted by a patient as a person who cares, or navigate the genuinely novel situation where no pattern fully applies. Those are human seats — and in every Cena workflow, a credentialed clinician holds them.
+          An <DefinedTerm id="agent">agent</DefinedTerm> can reason through a clinical protocol, surface a recommendation with its work shown, and flag where its confidence is lower. What the <DefinedTerm id="agent">agent</DefinedTerm> cannot do is bear legal or professional responsibility for what happens next, be trusted by a patient as a person who cares, or navigate the genuinely novel situation where no pattern fully applies. Those are human seats — and in every Cena workflow, a credentialed clinician holds them.
         </p>
         <p>
-          In every Cena workflow, a named human approves the output. That step isn&rsquo;t a formality — it&rsquo;s the foundation the whole model rests on.
+          In every Cena workflow, a named human <DefinedTerm id="approval">approves the output</DefinedTerm>. That step isn&rsquo;t a formality — it&rsquo;s the foundation the whole model rests on.
         </p>
       </div>
 

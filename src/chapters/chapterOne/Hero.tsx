@@ -1,4 +1,5 @@
 import { MotifMark } from '../../components/MotifMark';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 export function Hero() {
   return (
@@ -30,7 +31,7 @@ export function Hero() {
             margin: 0,
           }}
         >
-          Cena Health runs the work — diagnoses, care plans, knowledge work — with agents in the lead. Humans are accountable for the result, not for producing it.
+          Cena Health runs the work — diagnoses, care plans, knowledge work — with <DefinedTerm id="agent">agents</DefinedTerm> in the lead. Humans are accountable for the result, not for producing it.
         </h1>
         <p
           style={{
@@ -42,7 +43,7 @@ export function Hero() {
             marginTop: 20,
           }}
         >
-          This is not &ldquo;AI-assisted human work.&rdquo; It&rsquo;s the inverse. The agent reasons. The human signs off. That order matters.
+          This is not &ldquo;AI-assisted human work.&rdquo; It&rsquo;s the inverse. The <DefinedTerm id="agent">agent</DefinedTerm> reasons. The human signs off. That order matters.
         </p>
         <div
           className="scroll-cue"

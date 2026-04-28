@@ -1,6 +1,7 @@
 import { MotifMark } from '../../components/MotifMark';
 import { Reveal } from '../../components/Reveal';
 import { OwnershipDivision } from '../../components/OwnershipDivision';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 export function SectionThree() {
   return (
@@ -41,7 +42,7 @@ export function SectionThree() {
         }}
       >
         <p>
-          Cena owns the parts of the system that compound over time and that walk with us if we change AI vendors. The AI vendor provides the model — the part that reads, reasons, and writes. That&rsquo;s it. The asymmetry is the point: the wrapper framing implies the vendor side is the substance; the actual division shows it isn&rsquo;t.
+          Cena owns the parts of the system that compound over time and that walk with us if we change <DefinedTerm id="aiVendor">AI vendors</DefinedTerm>. The <DefinedTerm id="aiVendor">AI vendor</DefinedTerm> provides the model — the part that reads, reasons, and writes. That&rsquo;s it. The asymmetry is the point: the wrapper framing implies the vendor side is the substance; the actual division shows it isn&rsquo;t.
         </p>
       </div>
 

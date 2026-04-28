@@ -1,5 +1,6 @@
 import { MotifMark } from '../../components/MotifMark';
 import { Reveal } from '../../components/Reveal';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 const failureModes = [
   {
@@ -57,7 +58,7 @@ export function SectionFour() {
           color: 'var(--color-text-normal)',
         }}
       >
-        Vendor independence isn&rsquo;t a philosophical preference. It&rsquo;s protection against three categories of risk that have already played out for companies built on a single vendor.
+        <DefinedTerm id="vendorIndependence">Vendor independence</DefinedTerm> isn&rsquo;t a philosophical preference. It&rsquo;s protection against three categories of risk that have already played out for companies built on a single vendor.
       </p>
 
       <ol

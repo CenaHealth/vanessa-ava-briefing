@@ -1,4 +1,5 @@
 import { Reveal } from '../../components/Reveal';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 const costs = [
   {
@@ -13,7 +14,7 @@ const costs = [
     title: 'Vendor independence is a north star, not a dogma.',
     body: (
       <>
-        We default to building portable. When a vendor&rsquo;s capability is so much better than the alternative that the cost of independence outweighs the cost of lock-in for that specific decision, we make the call deliberately and document why. The discipline is in the evaluation, not in a blanket refusal. Today, before Cena is in front of patients, the model layer is selected on the merits at evaluation time — and the architecture is built so &ldquo;today&rsquo;s choice&rdquo; is the only commitment we&rsquo;ve made.
+        We default to building portable. When a vendor&rsquo;s capability is so much better than the alternative that the cost of independence outweighs the cost of <DefinedTerm id="lockIn">lock-in</DefinedTerm> for that specific decision, we make the call deliberately and document why. The discipline is in the evaluation, not in a blanket refusal. Today, before Cena is in front of patients, the model layer is selected on the merits at evaluation time — and the architecture is built so &ldquo;today&rsquo;s choice&rdquo; is the only commitment we&rsquo;ve made.
       </>
     ),
   },
@@ -21,7 +22,7 @@ const costs = [
     title: 'The thesis is testable, not proven.',
     body: (
       <>
-        If the major AI vendors stay roughly competitive on price, capability, and stewardship for years, the cost of independence is real and the upside is theoretical. Cena&rsquo;s bet is that they won&rsquo;t — but it is a bet, and we hold it openly.
+        If the major <DefinedTerm id="aiVendor">AI vendors</DefinedTerm> stay roughly competitive on price, capability, and <DefinedTerm id="stewardshipRisk">stewardship</DefinedTerm> for years, the cost of independence is real and the upside is theoretical. Cena&rsquo;s bet is that they won&rsquo;t — but it is a bet, and we hold it openly.
       </>
     ),
   },

@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import { ChapterOne } from './routes/ChapterOne';
 import { ChapterTwo } from './routes/ChapterTwo';
+import { Glossary } from './routes/Glossary';
 
 type Topic = {
   label: string;
@@ -21,6 +22,7 @@ const topics: Topic[] = [
   { label: 'Build vs. buy' },
   { label: 'AVA mental model' },
   { label: 'Knowledge layer' },
+  { label: 'Glossary', to: '/glossary' },
 ];
 
 function TopBar() {
@@ -120,6 +122,7 @@ function Shell() {
       <Routes>
         <Route path="/" element={<ChapterOne />} />
         <Route path="/vendor-independence" element={<ChapterTwo />} />
+        <Route path="/glossary" element={<Glossary />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />

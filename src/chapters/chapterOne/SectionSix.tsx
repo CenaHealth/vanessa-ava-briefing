@@ -1,4 +1,5 @@
 import { Reveal } from '../../components/Reveal';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 export function SectionSix() {
   return (
@@ -40,10 +41,10 @@ export function SectionSix() {
         >
           <p>Cena&rsquo;s approach has limits. We hold them honestly.</p>
           <p>
-            Agents make mistakes. The human approval step exists because we expect it — not as a failsafe against a rare edge case, but as a structural feature of the model. Agents-first doesn&rsquo;t mean agents-infallible. It means agents are reliably better at the domain reasoning than the alternative — and the human is there to catch what they&rsquo;re not.
+            <DefinedTerm id="agent">Agents</DefinedTerm> make mistakes. The human <DefinedTerm id="approval">approval step</DefinedTerm> exists because we expect it — not as a failsafe against a rare edge case, but as a structural feature of the model. Agents-first doesn&rsquo;t mean agents-infallible. It means <DefinedTerm id="agent">agents</DefinedTerm> are reliably better at the domain reasoning than the alternative — and the human is there to catch what they&rsquo;re not.
           </p>
           <p>
-            Running agents-first requires infrastructure most clinical organizations haven&rsquo;t built: a knowledge layer, evaluation systems, structured processes for building and maintaining trust in agent outputs. Buying an AI tool is easier. Building an agents-first operating model is not. We&rsquo;re doing the harder thing because we believe the economics and quality outcomes justify it.
+            Running agents-first requires infrastructure most clinical organizations haven&rsquo;t built: a <DefinedTerm id="knowledgeLayer">knowledge layer</DefinedTerm>, evaluation systems, structured processes for building and maintaining trust in <DefinedTerm id="agent">agent</DefinedTerm> outputs. Buying an AI tool is easier. Building an agents-first operating model is not. We&rsquo;re doing the harder thing because we believe the economics and quality outcomes justify it.
           </p>
           <p>
             The thesis is testable. Cena&rsquo;s pilots are the proof. If agents-first doesn&rsquo;t produce better outcomes and better economics than human-staffed alternatives, the thesis is wrong. We&rsquo;re betting it will — and we&rsquo;re building the measurement capability to find out.

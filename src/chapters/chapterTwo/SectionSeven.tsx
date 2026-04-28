@@ -2,6 +2,7 @@ import { MotifMark } from '../../components/MotifMark';
 import { Reveal } from '../../components/Reveal';
 import { ChapterPromptCard, type CardState } from '../../components/ChapterPromptCard';
 import { AvaInviteCta } from '../../components/AvaInviteCta';
+import { DefinedTerm } from '../../components/DefinedTerm';
 
 type Card = {
   chapterNumber: string;
@@ -91,9 +92,9 @@ export function SectionSeven() {
             color: 'var(--color-text-normal)',
           }}
         >
-          <p>This is chapter two. What you just read is our clearest current statement of how Cena stays independent of any single AI vendor.</p>
+          <p>This is chapter two. What you just read is our clearest current statement of how Cena stays independent of any single <DefinedTerm id="aiVendor">AI vendor</DefinedTerm>.</p>
           <p>
-            Three more chapters are queued: where we draw the line between building and buying, how AVA fits together as a system, and what&rsquo;s actually inside the shared knowledge layer. We&rsquo;ll write the next one based on what you ask.
+            Three more chapters are queued: where we draw the line between building and buying, how <DefinedTerm id="ava">AVA</DefinedTerm> fits together as a system, and what&rsquo;s actually inside the shared <DefinedTerm id="knowledgeLayer">knowledge layer</DefinedTerm>. We&rsquo;ll write the next one based on what you ask.
           </p>
           <p>
             If something on this page surprised you, confused you, or made you think of a question you&rsquo;d want to answer in a real conversation, the experience team would like to hear about it. Your conversation shapes what we write next.
