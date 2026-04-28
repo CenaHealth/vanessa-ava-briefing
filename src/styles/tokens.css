@@ -1,0 +1,116 @@
+/* ============================================
+   TOKENS — Vanessa AVA Briefing
+   Focused subset extracted from haven-ui (2026-04-28).
+   Source files (hex values copied verbatim, no transformation):
+     Lab/haven-ui/packages/design-system/src/styles/tokens/palette.css
+     Lab/haven-ui/packages/design-system/src/styles/tokens/typography.css
+     Lab/haven-ui/packages/design-system/src/styles/tokens/semantic.css
+   If haven-ui's brand teal/sand values shift, this file needs a manual sync.
+   ============================================ */
+
+@import "tailwindcss";
+
+@theme {
+  /* ---------- FONT FAMILIES ---------- */
+  --font-serif: 'Lora', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-sans:  'Source Sans 3', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:  'Source Code Pro', ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+
+  --font-weight-regular:  400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+
+  /* ---------- TYPE SCALE ---------- */
+  --text-display-02: 39.81px;
+  --text-display-02--line-height: 1.1;
+  --text-display-03: 33.18px;
+  --text-display-03--line-height: 1.15;
+
+  --text-heading-02: 23.04px;
+  --text-heading-02--line-height: 1.25;
+  --text-heading-03: 19.2px;
+  --text-heading-03--line-height: 1.3;
+  --text-heading-04: 16px;
+  --text-heading-04--line-height: 1.35;
+  --text-heading-05: 13.33px;
+  --text-heading-05--line-height: 1.4;
+
+  --text-body-01: 19.2px;
+  --text-body-01--line-height: 1.5;
+  --text-body-02: 16px;
+  --text-body-02--line-height: 1.5;
+  --text-body-03: 13.33px;
+  --text-body-03--line-height: 1.5;
+  --text-body-04: 11.11px;
+  --text-body-04--line-height: 1.4;
+  --text-body-04--letter-spacing: -0.0015em;
+
+  --text-button-large: 16px;
+  --text-button-large--line-height: 1;
+
+  --text-utility-tab: 13.33px;
+  --text-utility-tab--line-height: 1;
+  --text-utility-tab--letter-spacing: 0.0005em;
+
+  --text-utility-overline: 11.11px;
+  --text-utility-overline--line-height: 1.6;
+  --text-utility-overline--letter-spacing: 0.002em;
+
+  /* ---------- SAND PALETTE (canonical surface family) ----------
+     Hex literals — Tailwind v4 cascade-trap proof. */
+  --color-sand-50:  #f5eee5;
+  --color-sand-100: #eee6db;
+  --color-sand-150: #e7ded2;
+  --color-sand-200: #dfd5c9;
+  --color-sand-250: #d8cec0;
+  --color-sand-300: #d1cdc6;
+  --color-sand-400: #b3ada4;
+  --color-sand-500: #958e85;
+  --color-sand-600: #787066;
+  --color-sand-700: #5b544c;
+  --color-sand-800: #3f3933;
+  --color-sand-900: #25211d;
+  --color-sand-950: #0e0a08;
+
+  /* ---------- TEAL PALETTE (Cena brand) ---------- */
+  --color-teal-50:  #e9f5f2;
+  --color-teal-100: #d0e7e2;
+  --color-teal-200: #a8d1c9;
+  --color-teal-300: #7cb9ad;
+  --color-teal-350: #98c8be; /* derived midpoint for hero gradient blush */
+  --color-teal-400: #52a395;
+  --color-teal-500: #3a8478;
+  --color-teal-600: #1b685e;
+  --color-teal-700: #337a6e;
+  --color-teal-750: #2d6f64;
+  --color-teal-800: #27655b;
+  --color-teal-900: #04201c;
+  --color-teal-950: #010f0c;
+
+  /* ---------- RADII ---------- */
+  --radius-sm: 6px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+
+  /* ---------- ELEVATIONS ---------- */
+  --shadow-elevation-01: 0 1px 2px rgba(4, 3, 1, 0.04), 0 1px 3px rgba(4, 3, 1, 0.06);
+  --shadow-elevation-02: 0 2px 4px rgba(4, 3, 1, 0.04), 0 4px 8px rgba(4, 3, 1, 0.06);
+}
+
+@theme inline {
+  /* ---------- SEMANTIC ALIASES (runtime-resolved via var()) ---------- */
+  --color-surface-page:         var(--color-sand-50);
+  --color-surface-card:         #ffffff;
+  --color-surface-card-grouped: var(--color-sand-100);
+  --color-surface-raised:       var(--color-sand-150);
+  --color-surface-pane:         rgba(255, 255, 255, 0.6);
+
+  --color-text-normal: var(--color-sand-900);
+  --color-text-muted:  var(--color-sand-700);
+  --color-text-faint:  var(--color-sand-500);
+
+  --color-border-default: var(--color-sand-250);
+
+  --color-primary:      var(--color-teal-700);
+  --color-primary-edge: var(--color-teal-750);
+}

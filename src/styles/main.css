@@ -1,0 +1,174 @@
+/* ============================================
+   PAGE STYLES — Vanessa AVA Briefing
+   Order:
+     1. base resets + body type defaults
+     2. semantic component classes (.prose-callout, .pill, .anti-section, etc.)
+     3. animations + reduced-motion fallback
+   ============================================ */
+
+/* ---------- 1. base ---------- */
+
+html, body {
+  background-color: var(--color-surface-page);
+  color: var(--color-text-normal);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+::selection {
+  background: var(--color-teal-200);
+  color: var(--color-text-normal);
+}
+
+/* ---------- 2. semantic component classes ---------- */
+
+@layer components {
+  /* Prose pullquote — section 4. Lora Italic 500 (medium italic), teal/700 left
+     border, indented. Per memory feedback_lora_italic_weight_bump. */
+  .prose-callout {
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--color-teal-700);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--color-text-normal);
+  }
+
+  /* Topic-strip pill */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-family: var(--font-sans);
+    font-size: 13.33px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    transition: background 200ms ease, color 200ms ease;
+    user-select: none;
+  }
+  .pill[data-state="active"] {
+    background: var(--color-teal-700);
+    color: #ffffff;
+  }
+  .pill[data-state="inactive"] {
+    background: var(--color-sand-150);
+    color: var(--color-text-faint);
+  }
+
+  /* Anti-section wrapper — section 6. */
+  .anti-section {
+    padding-left: 1.5rem;
+    border-left: 2px solid rgba(65, 143, 130, 0.4);
+  }
+
+  /* Card surfaces */
+  .card {
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-elevation-01);
+  }
+  .card-grouped {
+    background: var(--color-surface-card-grouped);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-elevation-01);
+  }
+  .card-raised {
+    background: var(--color-surface-raised);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-elevation-02);
+  }
+
+  /* Primary button (Ava CTA, mailto) */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+    background: var(--color-teal-700);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: var(--text-button-large);
+    line-height: 1;
+    border: 1px solid var(--color-teal-750);
+    text-decoration: none;
+    transition: background 180ms ease, transform 180ms ease;
+  }
+  .btn-primary:hover {
+    background: var(--color-teal-800);
+  }
+  .btn-primary:active {
+    transform: translateY(1px);
+  }
+
+  /* Tab labels — section 5 */
+  .tab-trigger {
+    padding: 10px 16px 12px;
+    font-family: var(--font-sans);
+    font-size: var(--text-utility-tab);
+    letter-spacing: 0.0005em;
+    color: var(--color-text-muted);
+    border-bottom: 2px solid transparent;
+    background: none;
+    cursor: pointer;
+    margin-bottom: -1px;
+  }
+  .tab-trigger[data-state="active"] {
+    color: var(--color-text-normal);
+    font-weight: 600;
+    border-bottom-color: var(--color-teal-700);
+  }
+}
+
+/* ---------- 3. animations ---------- */
+
+/* Section-level reveal is a no-op visual: content is visible by default. The
+   data-visible attribute is left in place as a hook for future enhancements
+   without risking a blank page if the IntersectionObserver doesn't fire. */
+.fade-in {
+  opacity: 1;
+}
+
+/* Comparison columns/rows are visible by default. Browsers that support
+   @starting-style get a subtle entrance animation; everything else just
+   shows the content. JS state hooks remain in place for future enhancements
+   but are no longer load-bearing for visibility. */
+.cmp-col, .cmp-row {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 350ms ease-out, transform 350ms ease-out;
+}
+@supports (transition-behavior: allow-discrete) {
+  .cmp-col {
+    @starting-style { opacity: 0; transform: translateY(4px); }
+  }
+  .cmp-row {
+    @starting-style { opacity: 0; }
+  }
+}
+
+@keyframes chev-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(3px); }
+}
+.scroll-cue {
+  animation: chev-bob 1.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in, .cmp-col, .cmp-row {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .scroll-cue { animation: none; }
+}
