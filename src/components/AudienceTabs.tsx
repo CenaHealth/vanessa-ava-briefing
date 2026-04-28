@@ -29,7 +29,11 @@ export function AudienceTabs({ tabs, initial, ariaLabel }: Props) {
         role="tablist"
         aria-label={ariaLabel ?? 'Audience perspectives'}
         className="flex gap-1 px-2 pt-1 overflow-x-auto"
-        style={{ borderBottom: '1px solid var(--color-border-default)' }}
+        style={{
+          borderBottom: '1px solid var(--color-border-default)',
+          overflowY: 'hidden',
+          scrollbarWidth: 'none',
+        }}
       >
         {tabs.map((t) => (
           <button
