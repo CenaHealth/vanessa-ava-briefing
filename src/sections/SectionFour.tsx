@@ -5,17 +5,17 @@ const roles = [
   {
     title: 'Accountability',
     body: 'A human approves the outcome. The agent’s confidence level does not transfer legal or operational responsibility.',
-    icon: 'M5 13l4 4L19 7',
+    icon: 'verified',
   },
   {
     title: 'Trust',
     body: 'Patients, partners, and regulators trust people. The human’s role is to be the credentialed, accountable presence the work depends on.',
-    icon: 'M16 11V7a4 4 0 0 0-8 0v4M5 11h14v10H5V11Z',
+    icon: 'handshake',
   },
   {
     title: 'Judgment at the edges',
     body: 'When confidence is low, the case is novel, or ethics and tradeoffs are in play, that is the human’s seat.',
-    icon: 'M12 3v18M3 12h18M5 5l14 14M19 5L5 19',
+    icon: 'balance',
   },
 ];
 
@@ -73,20 +73,13 @@ export function SectionFour() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
         {roles.map((r) => (
           <div key={r.title}>
-            <svg
-              width={32}
-              height={32}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--color-teal-700)"
-              strokeWidth={1.6}
-              strokeLinecap="round"
-              strokeLinejoin="round"
+            <span
+              className="material-symbols-outlined mb-3"
               aria-hidden="true"
-              className="mb-3"
+              style={{ color: 'var(--color-teal-700)', fontSize: 32 }}
             >
-              <path d={r.icon} />
-            </svg>
+              {r.icon}
+            </span>
             <h3
               className="mb-2"
               style={{

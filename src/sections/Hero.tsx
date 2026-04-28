@@ -47,13 +47,14 @@ export function Hero() {
         <div
           className="scroll-cue"
           aria-hidden="true"
-          style={{
-            marginTop: 56,
-            color: 'var(--color-text-faint)',
-            fontSize: 18,
-          }}
+          style={{ marginTop: 56 }}
         >
-          ▾
+          <span
+            className="material-symbols-outlined"
+            style={{ color: 'var(--color-text-faint)', fontSize: 20 }}
+          >
+            keyboard_arrow_down
+          </span>
         </div>
       </div>
     </section>

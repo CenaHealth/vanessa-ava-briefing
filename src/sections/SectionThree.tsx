@@ -5,17 +5,17 @@ const pillars = [
   {
     title: 'Models capable of expert reasoning',
     body: 'Not text generation, but structured reasoning across clinical and operational logic in long, complex workflows.',
-    icon: 'M12 2a4 4 0 0 0-4 4v1.07A5 5 0 0 0 5 12a5 5 0 0 0 1 3 3 3 0 0 0 2 4h1v3h6v-3h1a3 3 0 0 0 2-4 5 5 0 0 0 1-3 5 5 0 0 0-3-4.93V6a4 4 0 0 0-4-4Z',
+    icon: 'neurology',
   },
   {
     title: 'Memory that compounds',
     body: 'Agents can now retain and build on prior work in a way that makes them more useful over time, not reset with every conversation.',
-    icon: 'M3 7h18v2H3V7Zm0 4h18v2H3v-2Zm0 4h18v2H3v-2Z',
+    icon: 'database',
   },
   {
     title: 'Tooling that operates in real systems',
     body: 'Agents can use tools, call other agents, and run live in actual workflows. This is real workflow capability, not demo theater.',
-    icon: 'M14.7 6.3a4 4 0 0 1 5 5l-2.3 2.3-5-5 2.3-2.3ZM4 18l6-6 5 5-6 6H4v-5Z',
+    icon: 'build',
   },
 ];
 
@@ -68,16 +68,13 @@ export function SectionThree() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {pillars.map((p) => (
           <div key={p.title} className="card p-4">
-            <svg
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="var(--color-teal-700)"
+            <span
+              className="material-symbols-outlined mb-3"
               aria-hidden="true"
-              className="mb-3"
+              style={{ color: 'var(--color-teal-700)', fontSize: 28 }}
             >
-              <path d={p.icon} />
-            </svg>
+              {p.icon}
+            </span>
             <h3
               className="mb-2"
               style={{

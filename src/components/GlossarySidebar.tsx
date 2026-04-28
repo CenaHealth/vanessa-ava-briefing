@@ -94,14 +94,16 @@ export function GlossarySidebarMobile({ entries }: Props) {
       >
         <span>Glossary</span>
         <span
+          className="material-symbols-outlined"
           aria-hidden="true"
           style={{
             transition: 'transform 200ms ease',
             transform: open ? 'rotate(180deg)' : 'rotate(0)',
             color: 'var(--color-text-faint)',
+            fontSize: 20,
           }}
         >
-          ▾
+          keyboard_arrow_down
         </span>
       </summary>
       <div
