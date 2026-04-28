@@ -9,13 +9,17 @@
       // from rafgraph/spa-github-pages (single-segment subdir = the project
       // base path).
       (function () {
-        var segmentCount = 1; // /vanessa-ava-briefing/...
+        // segmentCount = 1 covers single-segment subdir bases like
+        // /vanessa-ava-briefing/. Increase if the deploy lives in a deeper path.
+        var segmentCount = 1;
         var l = window.location;
         var pathSegments = l.pathname.split('/').slice(0, 1 + segmentCount).join('/');
+        // rest already begins with '/'; we omit the slash after `?p=` so the
+        // resolver reads it as the absolute in-app path.
         var rest = l.pathname.slice(pathSegments.length).replace(/&/g, '~and~');
         l.replace(
           l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          pathSegments + '/?p=/' + rest +
+          pathSegments + '/?p=' + rest +
           (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
           l.hash
         );
