@@ -96,14 +96,14 @@ export function SectionSeven() {
             Chapter two — vendor independence — is now live. Three more chapters are queued: where we draw the line between building and buying, how AVA fits together as a system, and what&rsquo;s actually inside the shared knowledge layer. We&rsquo;ll write the next one based on what you ask.
           </p>
           <p>
-            If something on this page surprised you, confused you, or made you think of a question you&rsquo;d want to answer in a real conversation — tell Aaron. Your reaction shapes what we write next.
+            If something on this page surprised you, confused you, or made you think of a question you&rsquo;d want to answer in a real conversation, the experience team would like to hear about it. Your reaction shapes what we write next.
           </p>
         </div>
 
         <div className="mb-10">
           <AvaInviteCta
-            href="mailto:aaron@cenahealth.com?subject=AVA%20Briefing%20%E2%80%94%20Chapter%201%20reaction"
-            label="Tell Aaron what surprised you"
+            href="mailto:experience@cenahealth.com?subject=AVA%20Briefing%20%E2%80%94%20Chapter%201%20reaction"
+            label="Contact the experience team"
             microcopy="Your reaction shapes the next chapter."
           />
         </div>
