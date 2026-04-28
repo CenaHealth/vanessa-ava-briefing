@@ -1,5 +1,5 @@
-import { MotifMark } from '../components/MotifMark';
-import { Reveal } from '../components/Reveal';
+import { MotifMark } from '../../components/MotifMark';
+import { Reveal } from '../../components/Reveal';
 
 const pillars = [
   {

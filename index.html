@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cena Health — Agents-First Thesis</title>
-    <meta name="description" content="Chapter one of an executive briefing on how Cena Health builds with agents in the lead." />
+    <title>Cena Health — AVA Briefing</title>
+    <meta name="description" content="Executive briefing on how Cena Health builds with agents in the lead, stays independent of any single AI vendor, and draws the line between building and buying." />
 
     <!-- Brand fonts: Lora (serif), Source Sans 3 (sans), Source Code Pro (mono).
          Mirror of haven-ui/apps/patient/index.html. Without these, system fallback
@@ -17,6 +17,28 @@
     <!-- Material Symbols (outlined). Internal-doc placeholder until FA Pro
          access is provisioned. -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+    <!-- SPA redirect resolver: 404.html encodes the requested path into ?p=…;
+         this runs before React mounts and restores the route via History API
+         so React Router sees the correct location on first paint. -->
+    <script>
+      (function () {
+        var l = window.location;
+        if (!/[?&]p=/.test(l.search)) return;
+        var query = l.search.slice(1).split('&').reduce(function (acc, kv) {
+          var i = kv.indexOf('=');
+          acc[kv.slice(0, i)] = kv.slice(i + 1);
+          return acc;
+        }, {});
+        var path = (query.p || '').replace(/~and~/g, '&');
+        var rest = query.q ? '?' + query.q.replace(/~and~/g, '&') : '';
+        window.history.replaceState(
+          null,
+          '',
+          l.pathname.replace(/\/$/, '') + path + rest + l.hash
+        );
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

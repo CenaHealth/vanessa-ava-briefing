@@ -41,7 +41,9 @@ export function GlossarySidebarDesktop({ entries }: Props) {
         alignSelf: 'flex-start',
         width: 280,
         marginLeft: 32,
-        padding: '20px 20px 20px 24px',
+        // Top padding intentionally matches the section's `py-20` (80px) so
+        // the GLOSSARY overline lines up with each section's overline marker.
+        padding: '80px 20px 20px 24px',
         borderLeft: '1px solid var(--color-border-default)',
         background: 'var(--color-surface-pane)',
         borderTopLeftRadius: 'var(--radius-md)',

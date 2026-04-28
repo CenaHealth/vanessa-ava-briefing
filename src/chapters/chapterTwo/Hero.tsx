@@ -1,4 +1,4 @@
-import { MotifMark } from '../components/MotifMark';
+import { MotifMark } from '../../components/MotifMark';
 
 export function Hero() {
   return (
@@ -26,11 +26,11 @@ export function Hero() {
             lineHeight: 1.12,
             letterSpacing: '-0.01em',
             color: 'var(--color-text-normal)',
-            maxWidth: 600,
+            maxWidth: 620,
             margin: 0,
           }}
         >
-          Cena Health runs the work — diagnoses, care plans, knowledge work — with agents in the lead. Humans are accountable for the result, not for producing it.
+          Cena uses AI models the way a hospital uses electricity: critical, swappable, and not where the value lives. The knowledge, the memory, and the workflows belong to Cena.
         </h1>
         <p
           style={{
@@ -38,11 +38,23 @@ export function Hero() {
             fontSize: 'var(--text-body-01)',
             lineHeight: 1.5,
             color: 'var(--color-text-muted)',
-            maxWidth: 520,
+            maxWidth: 540,
             marginTop: 20,
           }}
         >
-          This is not &ldquo;AI-assisted human work.&rdquo; It&rsquo;s the inverse. The agent reasons. The human signs off. That order matters.
+          Said another way: we rent the AI model&rsquo;s reasoning. We own everything else.
+        </p>
+        <p
+          style={{
+            fontFamily: 'var(--font-sans)',
+            fontSize: 'var(--text-body-02)',
+            lineHeight: 1.55,
+            color: 'var(--color-text-faint)',
+            maxWidth: 540,
+            marginTop: 14,
+          }}
+        >
+          This isn&rsquo;t an opinion about today&rsquo;s AI vendors. It&rsquo;s an architectural choice that survives any of them changing their minds.
         </p>
         <div
           className="scroll-cue"

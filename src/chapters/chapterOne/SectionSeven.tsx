@@ -1,32 +1,46 @@
-import { MotifMark } from '../components/MotifMark';
-import { Reveal } from '../components/Reveal';
-import { ChapterPromptCard } from '../components/ChapterPromptCard';
-import { AvaInviteCta } from '../components/AvaInviteCta';
+import { MotifMark } from '../../components/MotifMark';
+import { Reveal } from '../../components/Reveal';
+import { ChapterPromptCard, type CardState } from '../../components/ChapterPromptCard';
+import { AvaInviteCta } from '../../components/AvaInviteCta';
 
-const cards = [
+type Card = {
+  chapterNumber: string;
+  title: string;
+  question: string;
+  hook: string;
+  state: CardState;
+  to?: string;
+};
+
+const cards: Card[] = [
   {
     chapterNumber: 'Chapter 2',
     title: 'Vendor Independence',
     question: "Aren't you just a wrapper on OpenAI?",
-    hook: 'The model is the swappable part. Everything that makes Cena Cena — the knowledge, the memory, the workflows — belongs to Cena.',
+    hook: 'Cena uses AI models the way a hospital uses electricity — critical, swappable, and not where the value lives.',
+    state: 'shipped',
+    to: '/vendor-independence',
   },
   {
-    chapterNumber: 'Chapter 3',
-    title: 'The Shared Knowledge Layer',
-    question: "What's actually inside ava-brain?",
-    hook: 'The accumulated clinical and operational knowledge Cena is building — structured so any agent can draw on it, and none of it lives with a vendor.',
+    chapterNumber: 'Chapter 5',
+    title: 'Build vs. Buy',
+    question: 'Where do you draw the line?',
+    hook: "We buy the model's reasoning. We build everything that would walk out the door if we switched AI vendors.",
+    state: 'next',
   },
   {
     chapterNumber: 'Chapter 4',
     title: 'The AVA Mental Model',
     question: 'How do all the pieces fit together?',
     hook: 'AVA is the system — agents, knowledge layer, tools, and the human approval step — working as a single operating unit, not a stack of separate tools.',
+    state: 'queued',
   },
   {
-    chapterNumber: 'Chapter 5',
-    title: 'Build vs. Buy',
-    question: 'Where do you draw the line?',
-    hook: 'We buy inference. We build everything that would walk out the door if we switched providers.',
+    chapterNumber: 'Chapter 3',
+    title: 'The Shared Knowledge Layer',
+    question: "What's actually inside ava-brain?",
+    hook: 'The accumulated clinical and operational knowledge Cena is building — structured so any agent can draw on it, and none of it lives with a vendor.',
+    state: 'queued',
   },
 ];
 
@@ -79,7 +93,7 @@ export function SectionSeven() {
         >
           <p>This is chapter one. What you just read is our clearest current statement of how Cena thinks about agents and the work they do.</p>
           <p>
-            Four more chapters are in the queue: how we stay independent of any single AI vendor, how our shared knowledge layer actually works, how AVA fits together as a system, and where we draw the line between building and buying. We&rsquo;ll write the next one based on what you actually want explained.
+            Chapter two — vendor independence — is now live. Three more chapters are queued: where we draw the line between building and buying, how AVA fits together as a system, and what&rsquo;s actually inside the shared knowledge layer. We&rsquo;ll write the next one based on what you ask.
           </p>
           <p>
             If something on this page surprised you, confused you, or made you think of a question you&rsquo;d want to answer in a real conversation — tell Aaron. Your reaction shapes what we write next.
@@ -90,7 +104,7 @@ export function SectionSeven() {
           <AvaInviteCta
             href="mailto:aaron@cenahealth.com?subject=AVA%20Briefing%20%E2%80%94%20Chapter%201%20reaction"
             label="Tell Aaron what surprised you"
-            microcopy="Your reaction shapes chapter two."
+            microcopy="Your reaction shapes the next chapter."
           />
         </div>
 
@@ -102,6 +116,8 @@ export function SectionSeven() {
               title={c.title}
               question={c.question}
               hook={c.hook}
+              state={c.state}
+              to={c.to}
             />
           ))}
         </div>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cena Health — Briefing</title>
+    <script>
+      // SPA redirect for GitHub Pages. Encodes the requested path into a query
+      // string so index.html can restore the route via History API. Adapted
+      // from rafgraph/spa-github-pages (single-segment subdir = the project
+      // base path).
+      (function () {
+        // segmentCount = 1 covers single-segment subdir bases like
+        // /vanessa-ava-briefing/. Increase if the deploy lives in a deeper path.
+        var segmentCount = 1;
+        var l = window.location;
+        var pathSegments = l.pathname.split('/').slice(0, 1 + segmentCount).join('/');
+        // rest already begins with '/'; we omit the slash after `?p=` so the
+        // resolver reads it as the absolute in-app path.
+        var rest = l.pathname.slice(pathSegments.length).replace(/&/g, '~and~');
+        l.replace(
+          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          pathSegments + '/?p=' + rest +
+          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

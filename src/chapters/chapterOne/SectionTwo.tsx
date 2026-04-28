@@ -1,6 +1,6 @@
-import { MotifMark } from '../components/MotifMark';
-import { ComparisonBlock } from '../components/ComparisonBlock';
-import { Reveal } from '../components/Reveal';
+import { MotifMark } from '../../components/MotifMark';
+import { ComparisonBlock } from '../../components/ComparisonBlock';
+import { Reveal } from '../../components/Reveal';
 
 const rows = [
   {
