@@ -35,7 +35,8 @@ export function SectionSeven() {
     <Reveal as="section" className="py-20">
       <div
         style={{
-          background: 'var(--color-surface-raised)',
+          background: 'rgba(255, 255, 255, 0.7)',
+          border: '1px solid var(--color-border-default)',
           borderRadius: 'var(--radius-md)',
           boxShadow: 'var(--shadow-elevation-02)',
           padding: 32,
